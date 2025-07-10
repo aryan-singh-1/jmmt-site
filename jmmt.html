@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <title>JMMT – Logistics Simplified</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        color: #333;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+        background-color: #fff;
+      }
+      a {
+        color: #003366;
+        text-decoration: none;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        z-index: 100;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+      nav li {
+        list-style: none;
+        margin: 0 15px;
+      }
+      nav a {
+        padding: 8px;
+        font-weight: 600;
+        color: #003366;
+      }
+      nav a:hover {
+        background: #ffe680;
+        border-radius: 4px;
+      }
+      header {
+        height: 100vh;
+        background: linear-gradient(rgba(255,201,14,255), rgba(255,201,14,255)),
+          url("https://source.unsplash.com/1600x900/?logistics,truck") center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        padding: 0 20px;
+      }
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+      header p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      header .cta {
+        background: #ffcc00;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        color: #003366;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      header .cta:hover {
+        background: #f7b500;
+      }
+      section {
+        padding: 80px 20px;
+        max-width: 900px;
+        margin: auto;
+        background-color: #fff;
+      }
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        position: relative;
+        color: #003366;
+      }
+      .section-title::after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: #ffcc00;
+        display: block;
+        margin-top: 8px;
+      }
+      .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .services-list div {
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        text-align: center;
+        transition: box-shadow 0.3s;
+      }
+      .services-list div:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .fleet-img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+      .clients img {
+        max-width: 150px;
+        opacity: 0.8;
+        filter: grayscale(40%);
+        transition: all 0.3s;
+      }
+      .clients img:hover {
+        opacity: 1;
+        filter: none;
+      }
+      .branches-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      .branches-table th,
+      .branches-table td {
+        padding: 12px 8px;
+        border: 1px solid #ddd;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+      }
+      .contact-item strong {
+        min-width: 100px;
+        display: inline-block;
+      }
+      footer {
+        background: #f9f9f9;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .scroll-right {
+        min-width: 200%;
+        white-space: nowrap;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#branches">Branches</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <img src="images/logo.png" alt="JMMT Logo" style="width: 120px; margin-bottom: 20px;" />
+      <h1>JMMT</h1>
+      <p>Jay Maa Mansha Transport – Your Trusted Logistics Partner</p>
+      <button
+        class="cta"
+        onclick="document.getElementById('contact').scrollIntoView()"
+      >
+        Get In Touch
+      </button>
+    </header>
+
+    <section id="about">
+      <h2 class="section-title">About Us</h2>
+      <div class="content-box">
+        <p>
+          With nearly two decades of solid experience, JMMT delivers reliable
+          logistics and transportation services across India. From part-loads to
+          full truck-loads, we are equipped to handle your supply chain needs
+          with precision and care.
+        </p>
+
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            margin-top: 40px;
+          "
+        >
+          <!-- MD Photo -->
+          <img
+            src="https://via.placeholder.com/200x200.png?text=Anand+Kumar+Singh"
+            alt="Anand Kumar Singh"
+            style="
+              border-radius: 8px;
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+            "
+          />
+
+          <!-- MD Quote -->
+          <div style="flex: 1">
+            <p
+              style="
+                font-size: 1.1rem;
+                font-style: italic;
+                position: relative;
+                padding-left: 20px;
+                padding-right: 20px;
+              "
+            >
+              “At our core, we believe logistics is not just about moving
+              goods—it's about building trust, ensuring reliability, and driving
+              growth for our partners. With a dedicated team and strong values,
+              we continue to set benchmarks in timely delivery, communication,
+              and customer satisfaction. Thank you for choosing JMMT as your
+              logistics ally.”
+            </p>
+            <p style="margin-top: 20px; font-weight: bold; color: #003366">
+              – Anand Kumar Singh
+            </p>
+            <p style="font-size: 0.9rem; color: #666">Managing Director</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Team Members Section -->
+      <div
+        style="
+          margin-top: 60px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 40px;
+          text-align: center;
+        "
+      >
+        <!-- Shiv Singh -->
+        <div style="flex: 1 1 250px; max-width: 300px">
+          <img
+            src="https://via.placeholder.com/200x200.png?text=Shiv+Singh"
+            alt="Shiv Singh"
+            style="
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 50%;
+            "
+          />
+          <h4 style="margin-top: 15px; font-size: 1.2rem; color: #003366">
+            Shiv Singh
+          </h4>
+          <p style="margin: 5px 0; font-size: 0.95rem; color: #777">
+            Operations Chief
+          </p>
+          <p style="font-style: italic; font-size: 0.95rem; margin-top: 10px">
+            "Efficiency in movement is success in business."
+          </p>
+        </div>
+
+        <!-- Nikunj Naik -->
+        <div style="flex: 1 1 250px; max-width: 300px">
+          <img
+            src="https://via.placeholder.com/200x200.png?text=Nikunj+Naik"
+            alt="Nikunj Naik"
+            style="
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 50%;
+            "
+          />
+          <h4 style="margin-top: 15px; font-size: 1.2rem; color: #003366">
+            Nikunj Naik
+          </h4>
+          <p style="margin: 5px 0; font-size: 0.95rem; color: #777">
+            Customer Executive
+          </p>
+          <p style="font-style: italic; font-size: 0.95rem; margin-top: 10px">
+            "Customer satisfaction is not a department, it’s our culture."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="counts" style="padding: 60px 20px; background-color: #f7f7f7">
+      <div
+        style="
+          max-width: 1100px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
+          text-align: center;
+        "
+      >
+        <div style="flex: 1 1 200px">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1517/1517435.png"
+              alt="Years of Service"
+              width="70"
+              height="70"
+            />
+            <h3 style="margin: 10px 0; font-size: 1.8rem">
+              <span class="counter" data-target="20">0</span>+
+            </h3>
+            <p>Years of Reliable Logistics</p>
+          </div>
+        </div>
+
+        <div style="flex: 1 1 200px">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              fill="#FC0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21 10h-2V4h1V2H4v2h1v6H3a1 1 0 0 0-1 1v9h20v-9a1 1 0 0 0-1-1zm-7 8v-4h-4v4H7V4h10v14h-3z"
+              />
+              <path d="M9 6h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2z" />
+            </svg>
+            <h3 style="margin: 10px 0; font-size: 1.8rem">
+              <span class="counter" data-target="18">0</span>+
+            </h3>
+            <p>States Covered Actively</p>
+          </div>
+        </div>
+
+        <div style="flex: 1 1 200px">
+          <div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/443/443104.png"
+              width="60"
+              height="60"
+              alt="Tons Transported"
+            />
+            <h3 style="margin: 10px 0; font-size: 1.8rem">
+              <span class="counter" data-target="100000">0</span>+
+            </h3>
+            <p>Tons Transported / Week</p>
+          </div>
+        </div>
+
+        <div style="flex: 1 1 200px">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              fill="#FC0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.1 2 5 5.1 5 9c0 3.3 2.5 7.3 6.3 11.2.4.5 1.1.5 1.5 0C16.5 16.3 19 12.3 19 9c0-3.9-3.1-7-7-7z"
+              />
+            </svg>
+            <h3 style="margin: 10px 0; font-size: 1.8rem">
+              <span class="counter" data-target="800">0</span>+
+            </h3>
+            <p>Happy Logistics Clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" style="padding: 80px 20px; background-color: #fff">
+      <h2 class="section-title">Our Services</h2>
+      <div class="content-box">
+        <p>
+          We provide a wide range of transportation and logistics solutions
+          tailored to your business. Whether you're moving bulk shipments or
+          require warehousing and tracking support, JMMT is ready with
+          expert-managed service offerings.
+        </p>
+
+        <!-- Service Icons Grid -->
+        <div style="margin-top: 40px">
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 30px;
+              text-align: center;
+            "
+          >
+            <div style="flex: 1 1 200px">
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3702/3702636.png"
+                  alt="Part Load"
+                  width="60"
+                  height="60"
+                />
+                <h4 style="margin-top: 15px; font-size: 1.1rem">Part Load</h4>
+              </div>
+            </div>
+
+            <div style="flex: 1 1 200px">
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3176/3176295.png"
+                  alt="Full Load"
+                  width="60"
+                  height="60"
+                />
+                <h4 style="margin-top: 15px; font-size: 1.1rem">Full Load</h4>
+              </div>
+            </div>
+
+            <div style="flex: 1 1 200px">
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3455/3455470.png"
+                  alt="Warehousing"
+                  width="60"
+                  height="60"
+                />
+                <h4 style="margin-top: 15px; font-size: 1.1rem">Warehousing</h4>
+              </div>
+            </div>
+
+            <div style="flex: 1 1 200px">
+              <div>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/4903/4903865.png"
+                  alt="Tracked Goods Transport"
+                  width="60"
+                  height="60"
+                />
+                <h4 style="margin-top: 15px; font-size: 1.1rem">
+                  Tracked Goods Transport
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fleet" style="padding: 80px 20px; background-color: #ffffff">
+      <h2 class="section-title">Fleet Strength</h2>
+      <div class="content-box">
+        <p style="text-align: center">
+          We operate a diverse fleet to handle a wide range of logistics
+          demands. Whether it's large-volume consignments or quick urban
+          deliveries, our vehicles are ready for the job.
+        </p>
+
+        <!-- Fleet Types -->
+        <div
+          style="
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            text-align: center;
+          "
+        >
+          <!-- 32 Feet Container -->
+          <div style="flex: 1 1 200px; max-width: 250px">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1048/1048313.png"
+              alt="32 Feet Container"
+              style="height: 130px"
+            />
+            <h4 style="margin-top: 15px">32 Feet Container</h4>
+          </div>
+
+          <!-- 28 Feet Container -->
+          <div style="flex: 1 1 200px; max-width: 250px">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1048/1048321.png"
+              alt="28 Feet Container"
+              style="height: 130px"
+            />
+            <h4 style="margin-top: 15px">28 Feet Container</h4>
+          </div>
+
+          <!-- Tempo -->
+          <div style="flex: 1 1 200px; max-width: 250px">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1995/1995533.png"
+              alt="Tempo"
+              style="height: 130px"
+            />
+            <h4 style="margin-top: 15px">Tempo</h4>
+          </div>
+
+          <!-- Small Tempo -->
+          <div style="flex: 1 1 200px; max-width: 250px">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1866/1866863.png"
+              alt="Small Tempo"
+              style="height: 130px"
+            />
+            <h4 style="margin-top: 15px">Small Tempo</h4>
+          </div>
+
+          <!-- Flatbed Truck (Optional) -->
+          <div style="flex: 1 1 200px; max-width: 250px">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2210/2210153.png"
+              alt="Flatbed Truck"
+              style="height: 130px"
+            />
+            <h4 style="margin-top: 15px">Flatbed Truck</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" style="padding: 80px 20px; background-color: #fff">
+        <h2 class="section-title">Clients</h2>
+
+        <!-- Client Logos Marquee -->
+        <div
+          class="client-marquee-wrapper"
+          style="overflow: hidden; margin-top: 40px; white-space: nowrap"
+        >
+          <div
+            class="client-marquee scroll-right"
+            style="
+              display: inline-block;
+              animation: scroll-right 80s linear infinite;
+            "
+          >
+            <!-- Repeat logos twice for seamless loop -->
+            <!-- START logo set -->
+            <div style="display: inline-flex; gap: 60px">
+              <img src="images/clients/alok.jpg" height="120" />
+              <img src="images/clients/rs-expo.jpg" height="120" />
+              <img src="images/clients/atul.png" height="120" />
+              <img src="images/clients/appl pune.png" height="120" />
+              <img src="images/clients/gandhar.jpg" height="120" />
+              <img src="images/clients/grauer.gif" height="120" />
+              <img src="images/clients/sintex.fw.png" height="120" />
+              <img src="images/clients/sun shield.jpeg" height="120" />
+              <img src="images/clients/shekhawat.gif" height="120" />
+              <img src="images/clients/vaibhav laxmi.png" height="120" />
+              <img src="images/clients/celestial-kni.jpg" height="120" />
+              <img src="images/clients/p-chottolala.jpg" height="120" />
+              <img src="images/clients/meera cotton.png" height="120" />
+              <img src="images/clients/fusion-techno.jpg" height="120" />
+              <img src="images/clients/arvind.jpg" height="120" />
+              <img src="images/clients/vissco.jpg" height="120" />
+              <img src="images/clients/rr-kabel.jpg" height="120" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Marquee -->
+        <div
+          class="testimonial-marquee-wrapper"
+          style="overflow: hidden; margin-top: 60px; white-space: nowrap"
+        >
+          <div
+            class="testimonial-marquee scroll-right"
+            style="
+              display: inline-block;
+              animation: scroll-right 80s linear infinite;
+            "
+          >
+            <div style="display: inline-flex; gap: 60px">
+              <!-- 10 testimonials -->
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client1.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"JMMT is reliable and always on time."</p>
+                <strong>Rakesh Verma</strong><br /><small>RS Expo</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client2.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Great service across states."</p>
+                <strong>Priya Shah</strong><br /><small>Atul Ltd</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client3.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Supportive team and consistent delivery."</p>
+                <strong>Amit Sinha</strong><br /><small>APPL</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client4.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Best partner for full-load transport."</p>
+                <strong>Neha Jindal</strong><br /><small>Sun Shield</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client5.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Warehousing is neat and secured."</p>
+                <strong>Rajeev Malhotra</strong><br /><small>Grauer Weil</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client6.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Unmatched coverage and tracking."</p>
+                <strong>Sonal Mehta</strong><br /><small>Alok Ind.</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client7.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Reliable for inter-state delivery."</p>
+                <strong>Pankaj Rao</strong><br /><small>Celestial Knits</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client8.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Transparent updates every time."</p>
+                <strong>Divya Singh</strong><br /><small>Sintex</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client9.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Tempos help us with micro delivery."</p>
+                <strong>Nikhil Thakur</strong><br /><small>SVG Fashion</small>
+              </div>
+              <div style="width: 300px; text-align: center">
+                <img
+                  src="images/testimonials/client10.jpg"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                  "
+                />
+                <p>"Very cooperative and responsive team."</p>
+                <strong>Megha Desai</strong><br /><small>RR Kabel</small>
+              </div>
+            </div>
+
+            <!-- Duplicate testimonial set -->
+            <div style="display: inline-flex; gap: 60px">
+              <!-- Repeat same 10 again here for smooth looping -->
+              <!-- ... copy same 10 blocks here ... -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="branches"
+      style="padding: 80px 20px; background-color: #f7f7f7"
+    >
+      <h2 class="section-title">Our Network Presence</h2>
+      <div class="content-box">
+        <!-- Head Branch -->
+        <div style="margin-bottom: 50px">
+          <h3 style="color: #003366">🏢 Head Office – Vapi, Gujarat</h3>
+          <img
+            src="images/branches/vapi.jpg"
+            alt="Vapi Branch"
+            style="
+              width: 100%;
+              max-width: 700px;
+              border-radius: 8px;
+              margin-top: 15px;
+            "
+          />
+          <p style="margin-top: 10px">
+            Our central command and heart of operations.
+          </p>
+        </div>
+
+        <!-- Densely Served Branches -->
+        <div style="margin-bottom: 50px">
+          <h3 style="color: #003366">📍 Densely Served Branches</h3>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              margin-top: 20px;
+              justify-content: center;
+            "
+          >
+            <div style="flex: 1 1 250px; max-width: 300px">
+              <img
+                src="images/branches/kundli.jpg"
+                alt="Kundli"
+                style="width: 100%; border-radius: 8px"
+              />
+              <h4 style="margin-top: 10px">Kundli (Haryana)</h4>
+            </div>
+
+            <div style="flex: 1 1 250px; max-width: 300px">
+              <img
+                src="images/branches/surat.jpg"
+                alt="Surat"
+                style="width: 100%; border-radius: 8px"
+              />
+              <h4 style="margin-top: 10px">Surat (Gujarat)</h4>
+            </div>
+
+            <div style="flex: 1 1 250px; max-width: 300px">
+              <img
+                src="images/branches/faridabad.jpg"
+                alt="Faridabad"
+                style="width: 100%; border-radius: 8px"
+              />
+              <h4 style="margin-top: 10px">Faridabad (Haryana)</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- High Service Locations Without Branch -->
+        <div style="margin-bottom: 50px">
+          <h3 style="color: #003366">🚚 High-Traffic Locations We Serve</h3>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              margin-top: 20px;
+              justify-content: center;
+            "
+          >
+            <div style="flex: 1 1 250px; max-width: 300px">
+              <img
+                src="images/branches/bhiwandi.jpg"
+                alt="Bhiwandi"
+                style="width: 100%; border-radius: 8px"
+              />
+              <h4 style="margin-top: 10px">Bhiwandi (Maharashtra)</h4>
+              <p style="font-size: 0.95rem">Major delivery & pick-up zone</p>
+            </div>
+
+            <div style="flex: 1 1 250px; max-width: 300px">
+              <img
+                src="images/branches/sonipat.jpg"
+                alt="Sonipat"
+                style="width: 100%; border-radius: 8px"
+              />
+              <h4 style="margin-top: 10px">Sonipat (Haryana)</h4>
+              <p style="font-size: 0.95rem">Frequently operated route</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Locations -->
+        <div>
+          <h3 style="color: #003366">🌐 Also Serving +</h3>
+          <p style="margin-top: 10px">
+            Daman, Silvassa, Valsad, Ahmedabad, Noida, Ghaziabad, Dadra, Naroli,
+            Umbergaon, Pune, Kalol, Dindoli, Mumbai, Halol, Baroda, Indore,
+            Rajkot, Ankleshwar, Navi Mumbai, Bangalore, Chennai, Kolkata and
+            more...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="background-color: #f7f7f7; padding: 80px 20px">
+      <h2 class="section-title">Contact Us</h2>
+
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+          max-width: 1200px;
+          margin: auto;
+        "
+      >
+        <!-- Enquiry Contact -->
+        <div
+          style="
+            flex: 1 1 400px;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 10px;
+          "
+        >
+          <h3 style="color: #0066cc">General Enquiries / Help</h3>
+          <p style="margin: 10px 0 20px">
+            Got a small request or not sure what you need? Feel free to reach
+            out — even if it’s not our core service, we’ll guide you to the
+            right person.
+          </p>
+
+          <div class="contact-item">
+            <strong>📍 Head Office:</strong> Plot No.139, Parvati Engg Compound,
+            Phase 2, GIDC, Vapi, Gujarat – 396195
+          </div>
+          <div class="contact-item">
+            <strong>📧 Email:</strong>
+            <a href="mailto:vapi@jmmts.com">vapi@jmmts.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>📞 Phone:</strong> 9687689042 / 9274340251 / 9687689043
+          </div>
+        </div>
+
+        <!-- Corporate Contact -->
+        <div
+          style="
+            flex: 1 1 400px;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 10px;
+          "
+        >
+          <h3 style="color: #0066cc">Heavy Loads / Partnerships</h3>
+          <p style="margin: 10px 0 20px">
+            For industrial cargo, long-haul shipments, or strategic partnerships
+            — connect with us directly for high-priority handling.
+          </p>
+
+          <div class="contact-item">
+            <strong>📍 Regional Office:</strong> Plot No.1, Sector-74, Opp. BPTP
+            Resort, Faridabad, Haryana – 121004
+          </div>
+          <div class="contact-item">
+            <strong>📧 Email:</strong>
+            <a href="mailto:fbd@jmmts.com">fbd@jmmts.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>📞 Direct Contact:</strong><br />
+            <span style="margin-left: 20px"
+              ><strong>Umesh Morya</strong><br />Customer Lead<br />📱
+              9687689043</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Shared Social Icons -->
+      <div style="text-align: center; margin-top: 40px">
+        <a
+          href="https://wa.me/919687689043"
+          target="_blank"
+          style="margin: 0 15px"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+            width="28"
+            title="WhatsApp"
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/jmmtlogistics"
+          target="_blank"
+          style="margin: 0 15px"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+            width="28"
+            title="Facebook"
+          />
+        </a>
+        <a href="mailto:fbd@jmmts.com" title="Gmail" style="margin: 0 15px">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg"
+            width="28"
+          />
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 JMMT | Jay Maa Mansha Transport. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const counters = document.querySelectorAll(".counter");
+
+      const animateCounter = (counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const current = +counter.innerText;
+          const increment = target / 100;
+
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              observer.unobserve(entry.target); // run only once
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      counters.forEach((counter) => {
+        observer.observe(counter);
+      });
+    </script>
+  </body>
+</html>
